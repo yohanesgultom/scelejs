@@ -1,0 +1,29 @@
+{
+  "name": "scelejs",
+  "version": "1.0.0",
+  "description": "CasperJS scele.cs.ui.ac.id scrapper",
+  "main": "scele.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohanesgultom/scelejs.git"
+  },
+  "keywords": [
+    "scrapper",
+    "casperjs",
+    "phantomjs",
+    "scele"
+  ],
+  "author": "Yohanes Gultom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yohanesgultom/scelejs/issues"
+  },
+  "homepage": "https://github.com/yohanesgultom/scelejs#readme",
+  "dependencies": {
+    "casper": "^0.1.1",
+    "prompt": "^1.0.0"
+  }
+}
