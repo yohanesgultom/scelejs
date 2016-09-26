@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/yohanesgultom/scelejs#readme",
   "dependencies": {
-    "casper": "^0.1.1",
-    "prompt": "^1.0.0"
+    "casper": "^0.1.1"
   }
 }
