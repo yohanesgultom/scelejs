@@ -81,7 +81,7 @@ function processCourse(courseId) {
 
                 this.echo('News', 'INFO')
                 news.forEach(function(n) {
-                    that.echo('* ' + n.title + ' (' + n.poster + ', ' + n.date + ')')
+                    that.echo('* ' + n.title + ' (' + n.poster + ', ' + n.date + ') ' + n.url)
                 })
 
             } else {
@@ -94,8 +94,12 @@ function processCourse(courseId) {
                 var activityElements = this.getElementsInfo(activitySelector),
                     news = !activityElements ? [] : activityElements.map(function(elmt) {
                         var html = elmt.html,
-                            pattern = /([^<>]*)<br><a href="([^"]*)" [^<>]*>([^<>]*)<\/a>.*/i,
-                            values = html.match(pattern)
+                            pattern = /([^<>]*)<br><a href="([^"]*)" [^<>]*>([^<>]*)<\/a>.*/i
+
+                        this.print(html)
+
+                        var values = html.match(pattern)
+                        this.print(values)
                         return {
                             name: values[1],
                             url: values[2],
@@ -105,7 +109,7 @@ function processCourse(courseId) {
 
                 this.echo('Activity', 'INFO')
                 news.forEach(function(a) {
-                    that.echo('* ' + a.name + ' ' + a.fileName + ' (' + a.url + ')')
+                    that.echo('* ' + a.name + ' ' + a.fileName + ' ' + a.url)
                 })
 
             } else {
